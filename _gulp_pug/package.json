@@ -1,0 +1,32 @@
+{
+  "name": "projectName",
+  "description": "project description",
+  "version": "4.1.0",
+  "homepage": "",
+  "author": "Dmitriy Khristoev <info@websource.in.ua> (https://websource.in.ua/)",
+  "scripts": {
+    "watch": "gulp watch",
+    "html": "gulp pug",
+    "css": "gulp scss",
+    "compress": "gulp compress",
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "emitty": "^1.4.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-wait2": "0.0.5",
+    "normalize-scss": "^7.0.1",
+    "rimraf": "^2.6.3"
+  }
+}
