@@ -1,15 +1,32 @@
 // Header
 header.header
-  .container
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+  .container-fluid
+
+    .header__logo
+      span.span Конаково 
+        span.line country club
+
+    a(href="tel:").header__phone +7 (495) 626 2-333
+
+    .header__address
+      i.ion-ios-location
+      | 171256, РФ, Тверская обл., г. Конаково, ул. Пригородная, дом 70 
+
+    .header__navigation
+      nav(role="navigation")
+        ul
+          li: a(href="#!") Наши коттеджи
+          li: a(href="#!") Отдых
+          li: a(href="#!") Контакты
+
+      button(type="button").header__btn
+        i
+      nav.header__mobile(role="navigation")
+        ul
+          li: a(href="#!") Главная
+          li: a(href="#!") Коттеджи
+          li: a(href="#!") Услуги
+          li: a(href="#!") Новости
+          li: a(href="#!") О нас
+          li: a(href="#!") Контакты
+        

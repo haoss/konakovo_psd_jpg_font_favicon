@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'GetVoIP Grotesque';
+    src: url('subset-GetVoIPGrotesque-Italic.eot');
+    src: url('subset-GetVoIPGrotesque-Italic.eot?#iefix') format('embedded-opentype'),
+        url('subset-GetVoIPGrotesque-Italic.woff2') format('woff2'),
+        url('subset-GetVoIPGrotesque-Italic.woff') format('woff'),
+        url('subset-GetVoIPGrotesque-Italic.ttf') format('truetype'),
+        url('subset-GetVoIPGrotesque-Italic.svg#GetVoIPGrotesque-Italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GetVoIP Grotesque';
+    src: url('subset-GetVoIPGrotesque.eot');
+    src: url('subset-GetVoIPGrotesque.eot?#iefix') format('embedded-opentype'),
+        url('subset-GetVoIPGrotesque.woff2') format('woff2'),
+        url('subset-GetVoIPGrotesque.woff') format('woff'),
+        url('subset-GetVoIPGrotesque.ttf') format('truetype'),
+        url('subset-GetVoIPGrotesque.svg#GetVoIPGrotesque') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

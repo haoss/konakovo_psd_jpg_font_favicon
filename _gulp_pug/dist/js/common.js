@@ -72,6 +72,8 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  headerBtn();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -152,5 +154,21 @@ function simpleForm(form, callback) {
     $(form).addClass('ajax-waiting');
 
     return false;
+  });
+}
+
+function headerBtn(){
+  var btn = $('.header__btn');
+
+  btn.on('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var _this = $(this);
+
+    if (_this.hasClass('is-active')) {
+      _this.removeClass('is-active');
+    } else {
+      _this.addClass('is-active');
+    }
   });
 }

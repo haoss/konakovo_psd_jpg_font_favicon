@@ -19,8 +19,8 @@ html, body {
 
 body {
   background: $color-white;
-  font-size: 16px;
-  font-family: $primary-font;
+  font-size: 15px;
+  font-family: $font-dinpro;
   color: $primary-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -65,7 +65,7 @@ small, .small {
 }
 
 p {
-  line-height: 22px;
+  line-height: 26px;
   margin: 0 0 20px 0;
 }
 
@@ -88,19 +88,21 @@ hr {
 // Links
 a, .link {
   color: $link-color;
-  text-decoration: underline;
+  text-decoration: none;
   outline: none;
   transition: color 0.35s, background 0.35s, border 0.35s;
-  &:hover, &:focus, &:active {
+  &:hover {
     color: $link-color;
     text-decoration: none;
+  }
+  &:focus, &:active {
     outline: none;
   }
 }
 
 a.link {
-  &:hover, &:focus, &:active {
-    text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -116,6 +118,12 @@ img, .img {
   width: 100%;
   min-width: 320px;
   padding: 0 15px;
+  &-fluid {
+    width: 100%;
+    max-width: inherit;
+    min-width: 320px;
+    padding: 0 15px;
+  }
 }
 
 /* text align */

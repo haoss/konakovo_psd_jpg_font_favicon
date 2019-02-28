@@ -1,4 +1,140 @@
 /* header */
 .header {
-  background-color: $color-gray;
+  background-color: $color-white;
+  &>.container-fluid {
+    @include clearfix;
+    height: 70px;
+  }
+
+  &__phone {
+    font-family: $font-voip;
+    float: left;
+    margin-left: 150px;
+    margin-top: 25px;
+    font-size: 20px;
+    color: $primary-color;
+    line-height: 1;
+    &:hover {
+      text-decoration: none;
+      color: $color-green;
+    }
+  }
+
+  &__logo {
+    float: left;
+    font-family: $font-voip;
+    margin: 12px 0 0 30px;
+    .span {
+      display: block;
+      line-height: 1;
+      color: $primary-color;
+      font-size: 31px;
+    }
+    .line {
+      display: block;
+      line-height: 1;
+      color: $color-green;
+      font-size: 15px;
+      font-style: italic;
+      white-space: nowrap;
+      letter-spacing: 3.5px;
+      position: absolute;
+      &::before {
+        display: inline-block;
+        width: 41px;
+        height: 2px;
+        vertical-align: middle;
+        background: $color-green;
+        content: '';
+        margin-right: 19px;
+      }
+    }
+  }
+
+  &__address {
+    float: left;
+    font-size: 12px;
+    line-height: normal;
+    position: relative;
+    padding-left: 34px;
+    margin-left: 66px;
+    margin-top: 20px;
+    max-width: 250px;
+    .ion-ios-location {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 1;
+      font-size: 30px;
+      color: #bdbdbd;
+    }
+  }
+
+  &__navigation {
+    float: right;
+    position: relative;
+    padding-right: 80px;
+    font-weight: 500;
+    &>nav {
+      float: right;
+      &>ul {
+        &>li {
+          float: left;
+          padding: 21px 0;
+          &+li {
+            margin-left: 33px;
+          }
+          &>a,&>span {
+            display: block;
+            line-height: 24px;
+            color: $primary-color;
+          }
+          &>a {
+            border-bottom: 1px solid transparent;
+            &:hover {
+              text-decoration: none;
+              color: $color-green;
+              border-bottom-color: $color-green;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    position: absolute;
+    
+  }
+  &__btn {
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: $color-white;
+    background: $color-green;
+    border: 0;
+    i {
+      background: $color-green url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAAWElEQVQokWP8////fwYKABMlmhkYGBhYGBgYTCgxgJFCHzCwILFVGBgYSkk24f///zBs858MgOyCFwwMDLNIdQBVwwAdqDMwMPAQNAEpDNDxYWLCgOKEBAArsIMZBQh/iAAAAABJRU5ErkJggg==') 0 0 no-repeat;
+      height: 12px;
+      width: 17px;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+    &.is-active {
+      background: $primary-color;
+      i {
+        background-color: $primary-color;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAYklEQVQokZ2SyQ3AIAwE3YYLoAHaD31ANUw+RooUWMk8ePgYvD4MKMADOGDiOdCAYgEAdAE6MCKvLUcX4C9+DCi/+rGeFOy0r8R5krxrun6AGbYpKF0p3VN6eld7urqI9O29/4Y3Qd8pR/EAAAAASUVORK5CYII=');
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
 }
