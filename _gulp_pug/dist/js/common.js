@@ -73,6 +73,52 @@ $(document).on('ready', function(){
   });
 
   headerBtn();
+  phoneMask();
+
+  $('.main-slider__wrapper').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="ion-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="ion-chevron-right"></i></button>',
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+
+  $('.services__list').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true,
+    prevArrow: '.services__btn-prev',
+    nextArrow: '.services__btn-next',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          centerMode: false
+        }
+      },
+    ]
+  });
+
+  $('.about__club-carousel').slick({
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -159,6 +205,7 @@ function simpleForm(form, callback) {
 
 function headerBtn(){
   var btn = $('.header__btn');
+  var mobile = $('.header__mobile');
 
   btn.on('click', function(e){
     e.preventDefault();
@@ -167,8 +214,26 @@ function headerBtn(){
 
     if (_this.hasClass('is-active')) {
       _this.removeClass('is-active');
+      mobile.removeClass('is-active');
     } else {
       _this.addClass('is-active');
+      mobile.addClass('is-active');
     }
   });
+
+  mobile.on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $(document).on('click', function(){
+    btn.removeClass('is-active');
+    mobile.removeClass('is-active');
+  });
+}
+
+function phoneMask() {
+  var phone = $('.phone-mask');
+  phone.each(function () {
+    $(this).mask("+7 (999) 999-99-99");
+  })
 }

@@ -1,6 +1,40 @@
 // Footer
 footer.footer
   .container
-    
-    div &copy; 2018
+    .footer__top
+      .row
+        .col-md-4.col-sm-6
+          .footer__title ЗАБРОНИРОВАТЬ котедж
+          .footer__phone 
+            a(href="tel:")
+              i.ion-android-call
+              | +7 (495) 626 2-333
+          .footer__mail
+            a(href="mailto:")
+              i.ion-ios-email
+              | info@site-name.ru
+        .col-md-4.col-sm-6
+          .footer__address
+            i.ion-android-pin
+            | Адрес: 171256, РФ, Тверская обл., г. Конаково, ул. Пригородная, дом 70 
+          .footer__instagram
+            a(href="#!")
+              i.ion-social-instagram
+              | Instagram: InstaNameClub
+
+        .col-md-4.hidden-sm.hidden-xs
+          .footer__map
+            a(href="#!")
+              span
+                i.ion-android-pin
+                | посмотреть на карте
+  
+    .footer__bottom
+      .row.row--flex
+        .col
+          .footer__copyright ©2019 Конаково Country Club. Загородный отдых в подмосковье.
+        .col
+          .footer__development Разработка и продвижение 
+            a(href="#!")
+              img(src="./images/piarme.png", alt="")
   

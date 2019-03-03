@@ -1,4 +1,5 @@
-@import "node_modules/normalize-scss/sass/_normalize.scss";
+@import "0-vendor/bootstrap/bootstrap.scss";
+@import "1-base/_family.scss";
 @import "1-base/_mixin.scss";
 @import "1-base/_variables.scss";
 @import "1-base/_font.scss";

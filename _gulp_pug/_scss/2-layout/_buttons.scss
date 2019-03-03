@@ -4,8 +4,7 @@
   display: inline-block;
   padding: 0 15px;
   margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 17px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -13,20 +12,27 @@
   cursor: pointer;
   user-select: none;
   background-image: none;
-  background-color: $color-gray;
-  border: 1px solid $color-white;
-  border-radius: 3px;
-  height: 40px;
-  line-height: 40px;
+  background-color: $color-green;
+  border: 1px solid $color-green;
+  border-radius: 35px;
+  height: 51px;
+  line-height: 51px;
   text-decoration: none;
   transition: all 0.35s;
-  &:hover, &:focus, &:active {
-    outline: none;
+  width: 100%;
+  color: $color-white;
+  font-family: $font-dinpro;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 15px rgba($color-green,.4);
+  &:hover {
+    box-shadow: none;
+    background: #6cd656;
+    border-color: #6cd656;
+    color: $color-white;
   }
-
-  &--default {
-    color: #333;
-    background-color: $color-white;
-    border-color: $color-gray;
+  &:focus, &:active {
+    outline: none;
   }
 }

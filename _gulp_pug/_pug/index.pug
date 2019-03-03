@@ -15,19 +15,211 @@ html(lang="ru")
     include ./_include/_header
 
     .main-slider
+      .main-slider__title конаково
+        strong country club
+      .main-slider__wrapper
+        div
+          .main-slider__block(style="background-image: url('./tmp/main-slider/main-slider-1.jpg');")
+        div
+          .main-slider__block(style="background-image: url('./tmp/main-slider/main-slider-2.jpg');")
+        div
+          .main-slider__block(style="background-image: url('./tmp/main-slider/main-slider-3.jpg');")
     
+    // Content
     .content
-      .container
-        
-        h1 Главная 2
-        
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
+      
+      // Advantages
+      .advantages
+        .container
 
+          .advantages__info
+            div
+              p.border-lines
+                span Новые коттеджи
+                br
+                span Конаково
+                br
+                span «Country Club»
+                br
+                span на берегу реки Волга,
+                br
+                span в 120 км от Москвы 
+            div
+              img(src="./tmp/4-cottages.png", alt="")
+
+          .advantages__row
+            div
+              .advantages__block
+                .advantages__block-number 01
+                .advantages__block-plus +
+                p Наши коттеджи 
+                  strong новые и модерновые
+                  | , а дата постройки 
+                  strong 2019 год
+            div
+              .advantages__block
+                .advantages__block-number 02
+                .advantages__block-plus +
+                p 
+                  strong Современный дизайн
+                  |  и только экологичные материалы
+            div
+              .advantages__block
+                .advantages__block-number 03
+                .advantages__block-plus +
+                p 
+                  strong Транспортная доступность
+                  |  из Москвы и Московской области
+            div
+              .advantages__block
+                .advantages__block-number 04
+                .advantages__block-plus +
+                p Комфортабельные 
+                  strong коттеджи у реки
+                  |  на берегу Московского моря
+
+      // Services
+      .services
+        .services__btn
+          .container
+            button.slick-prev.slick-arrow.services__btn-prev(type='button')
+              i.ion-chevron-left
+              
+            button.slick-next.slick-arrow.services__btn-next(type='button')
+              i.ion-chevron-right
+        .services__list
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-1.jpg');")
+              .services__block-content
+                .services__block-title Расположение на берегу реки
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-2.jpg');")
+              .services__block-content
+                .services__block-title Водные види отдыха и развлечений
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-3.jpg');")
+              .services__block-content
+                .services__block-title Охраняемая территория
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-4.jpg');")
+              .services__block-content
+                .services__block-title Футбол, теннис, волейбол пейнтбол, тир
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-5.jpg');")
+              .services__block-content
+                .services__block-title Детский городок
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-1.jpg');")
+              .services__block-content
+                .services__block-title Расположение на берегу реки 2
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-2.jpg');")
+              .services__block-content
+                .services__block-title Водные види отдыха и развлечений 2
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-3.jpg');")
+              .services__block-content
+                .services__block-title Охраняемая территория 2
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-4.jpg');")
+              .services__block-content
+                .services__block-title Футбол, теннис, волейбол пейнтбол, тир 2
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+          div
+            .services__block(style="background-image: url('./tmp/services/services-img-5.jpg');")
+              .services__block-content
+                .services__block-title Детский городок 2
+                p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. 
+              a(href="!#").services__block-more подробнее
+                i
+
+      // Video about
+      .video-about
+        .container
+
+          .video-about__row
+            div
+              .video-about__video(style="background-image: url('./tmp/video-about.png');")
+                a(href="#!")
+                img(src="./images/video-about-round.png", alt="")
+                span.span
+                  i.ion-social-youtube
+                  span посмотреть видеоролик
+            div
+              .video-about__info
+                .video-about__info-title
+                  strong видео о нас 
+                  span 120 % позитива и отдыха
+                .video-about__info-number
+                  strong 1599
+                    small га
+                  p Экологически чистой территории и водных ресурсов для вашего отдыха!
+
+      // About
+      .about
+        .container
+
+          .about__club
+            .about__club-info
+              .row
+                .col-sm-4
+                  .border-lines
+                    span Отдых в 
+                    span Конаково
+                    span Сountry club
+                .col-sm-8
+                  .about__club-content
+                    p Загородный комплекс - лучшее место для отдыха и развлечений в подмосковье! Здесь свежий, чистый воздух позволяет дышать полной грудью, а природа добавляет сил и энергии. Вас ожидает атмосфера европейского комфорта, где царит роскошь, удобство и гостеприимство.
+                    p Для проживания предоставляются четыре комфортабельных коттеджа со всеми удобствами. Коттеджи оснащены всем необходимым: телефон, ЖК-телевизоры, беспроводной интернет (WiFi), мини-бар. Отдых в Московской области с комфортом, красивая природа и разные развлечения.
+            .about__club-carousel
+              - for (var i=0; i<5; i++) {
+              div
+                .about__block
+                  .about__block-info
+                    div
+                      .about__block-head ночной клуб
+                      p Отдых который сложно забыть. Ночной клуб ежедневно проводит одни из самых ярких вечеринок в самом центре северной части России! Вас ждет незабываемая атмосфера ночной жизни и безудержного веселья, громкая музыка и красивые девушки. 
+                      p В баре огромный выбор напитков и несколько уникальных сортов пива, все по доступным ценам! Отдых который сложно забыть. Ночной клуб ежедневно проводит одни из самых ярких вечеринок в самом центре северной части России! Вас ждет незабываемая атмосфера ночной жизни и безудержного веселья, громкая музыка и красивые девушки. 
+                      p В баре огромный выбор напитков и несколько уникальных сортов пива, все по доступным ценам!
+                    a(href="#!").about__block-more Читать далее
+                      i
+                  .about__block-img
+                    img(src="./tmp/about-club-gallery.jpg", alt="").img-responsive
+                    img(src="./tmp/about-club-gallery.jpg", alt="")
+                    img(src="./tmp/about-club-gallery.jpg", alt="")
+              - }
+      
+      // Form
+      include ./_include/_form
     
     include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+    //- div(style="height: 1000px; background-color: #000")
 
     // Load Scripts
     include ./_include/_footer-js
