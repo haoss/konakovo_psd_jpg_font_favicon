@@ -1,0 +1,89 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список статей' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список статей' + ' - Конаково' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li: a(href="#!") Главная
+          li: span  Название раздела
+
+    // Big picture
+    .big-picture(style="background-image: url('./tmp/bg/bg-articles.jpg');")
+    
+    // Content
+    .content
+      .container
+
+        h1 Название раздела
+
+        // Articles
+        .articles
+          .articles__row
+            .row
+              .col-md-4
+                a(href="#!").articles__row-title В Тверской области на Московском море разрешили выступать только на океанических серф-бордах
+                time.articles__row-time 03 января 2019
+              .col-md-8
+                .articles__block
+                  .articles__block-content
+                    p Такое условие выдвинуто организаторами уникального мероприятия под названием Nautique Surf Pro, которое пройдет в Конаково при поддержке Российской федерации серфинга 15 июля. NSP — уникальный формат мероприятия, чистый серфинг...
+                  .articles__block-img(style="background-image: url('./tmp/articles/articles-img-1.jpg');")
+                    a(href="#!")
+                    .articles__block-more Подробнее
+                      i
+          .articles__row
+            .row
+              .col-md-4
+                a(href="#!").articles__row-title В Конаковском районе прошел фестиваль экстремальных видов спорта и музыки «Русская волна»
+                time.articles__row-time 03 января 2019
+              .col-md-8
+                .articles__block
+                  .articles__block-content
+                    p На берегу Московского моря, на базе event-отеля «Конаково Ривер Клаб», завершился фестиваль экстремальных видов спорта и музыки «Русская волна». Были проведены соревнования по джетски, кабельному вейкбордингу, падлборду, а также парусная регата в классе J70.
+                  .articles__block-img(style="background-image: url('./tmp/articles/articles-img-2.jpg');")
+                    a(href="#!")
+                    .articles__block-more Подробнее
+                      i
+          .articles__row
+            .row
+              .col-md-4
+                a(href="#!").articles__row-title Показ мод в Конаково Кантри Клаб
+                time.articles__row-time 03 января 2019
+              .col-md-8
+                .articles__block
+                  .articles__block-content
+                    p В роскошном загородном отеле, расположившемся на берегу Волги, Конаково Ривер Клаб состоялось мероприятие, посвященное русскому стилю.Талантливая модельер Карина Дрыганова продемонстрировала всем гостям свои шедевры.
+                  .articles__block-img(style="background-image: url('./tmp/articles/articles-img-3.jpg');")
+                    a(href="#!")
+                    .articles__block-more Подробнее
+                      i
+
+          .text-center
+            button(type="btn").btn.btn--inline-block.btn--more
+              i.ion-refresh
+              | загрузить
+
+      // Form
+      include ./_include/_form
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

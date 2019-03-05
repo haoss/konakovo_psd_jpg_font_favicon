@@ -35,10 +35,12 @@ body {
   margin: 0 0 15px 0;
 }
 .h1, h1 {
-  font-size: 21px;
+  font-size: 50px;
   line-height: 1.05;
   letter-spacing: -1px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  font-family: $font-voip;
+  font-style: italic;
 }
 .h2, h2 {
   font-size: 18px;
