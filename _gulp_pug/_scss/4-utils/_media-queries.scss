@@ -434,9 +434,12 @@
       }
     }
     &__copyright, &__development {
-      height: 30px;
-      line-height: 30px;
+      height: auto;
+      line-height: inherit;
       float: none;
+    }
+    &__development {
+      padding-top: 5px;
     }
     &__mail {
       margin-bottom: 25px;
