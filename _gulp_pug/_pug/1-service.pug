@@ -1,0 +1,173 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '1 услуга' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 услуга' + ' - Конаково' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li: a(href="#!") Главная
+          li: span  Название раздела
+
+    // Big picture
+    .big-picture(style="background-image: url('./tmp/bg/bg-article.jpg');")
+    
+    // Content
+    .content
+      .container
+
+        .content__head.content__head--document
+          h1 Йога и пилатес
+
+        .content__document
+
+          .row
+            .col-md-8
+              p.introtext Йога и пилатес – это восточная и западная системы, направленные на укрепление организма, оздоровление и познание своего тела. Йога является образом жизни и духовной практикой, она помогает оздоровить весь организм. 
+              
+              .one-service__wrapper
+                .one-service__carousel
+                  - for (var i=0; i<5; i++) {
+                  div
+                    .one-service__block
+                      .one-service__block-img
+                        img(src="./tmp/one-service-gallery.jpg", alt="").img-responsive
+                        img(src="./tmp/one-service-gallery.jpg", alt="")
+                        img(src="./tmp/one-service-gallery.jpg", alt="")
+                  - }
+
+                p
+                  small Простой, но функционально продуманный альпийский дизайн, в котором особый акцент делается на экологичности материалов отделки и мебели.
+
+              p Пилатес же ориентирован преимущественно на оздоровление позвоночника, суставов и является сугубо физической тренировкой, не связанной с философией. И йога, и пилатес целительны для организма и помогают:
+
+              ul
+                li научиться размеренному, правильному дыханию;
+                li сформировать правильную осанку;
+                li сделать гибче суставы, мышцы;
+                li избавиться от лишнего веса, отшлифовать и гармонизировать тело;
+                li вернуть телу природную статность и грациозность;
+                li улучшить координацию;
+                li стабилизировать психоэмоциональное состояние.
+
+              p Занятия пилатесом и йогой помогут вам самосовершенствоваться, достичь энергетического баланса тела, всегда быть в хорошем настроении, забыть о воздействии стрессов и недугах.
+              p В гостиничном комплексе Конаково Ривер Клаб занятия йогой и пилатесом ведут опытные тренеры, которые практикуют интересный и креативный подход к тренировкам и помогают получить лучший эффект от упражнений.
+              p Занятия проходят в специально оборудованном для занятий йогой и пилатесом зале - “Восточной” комнате каждую субботу и воскресенье в 16 часов, сам зал для занятий открыт для гостей отеля круглосуточно и полностью оборудован.
+
+            .col-md-4.hidden-sm.hidden-xs
+
+              // One object
+              .one-object
+                .one-object__about
+                  .one-object__title ИНФРАСТРУКТУРА
+                  .one-object__about-info 
+                    p Зал для занятий - “Восточная комната”
+                    p Площадки для йоги на свежем воздухе
+                  .one-object__title УСЛУГИ
+                  .one-object__about-info 
+                    p Профессиональный инвентарь
+                    p Групповые занятия 
+                    p Индивидуальные занятия (по предварительному бронированию на ресепшн отеля)
+                .one-object__contacts
+                  .one-object__title КОНТАКТЫ
+                  p 
+                    strong Запись на индивидуальные занятия:
+                    br
+                    a(href="tel:") Тел.: +7 495 626 23 33
+                  p
+                    strong Заказ корпоративных услуг: 
+                    br
+                    | Ахова Анастасия 
+                    br
+                    a(href="tel:") Тел.: +7 915 713 06 71 
+                    br
+                    a(href="mailto:") a.ahova@konakovo.com
+                  p 
+                    strong Бронирование коттеджей:
+                    br
+                    | Тихановская Елена
+                    br
+                    a(href="tel:") Тел.: +7 919 050 50 11
+                    br
+                    a(href="mailto:") e.tikhanovskaya@konakovo.com
+
+        // Gallery
+        .gallery
+          p.border-lines
+            span Фотогалерея 
+          .gallery__carousel
+            div
+              a(href="./tmp/1-service/1-service-1.png").gallery__item
+                img(src="./tmp/1-service/1-service-1.png", alt="")
+            div
+              a(href="./tmp/1-service/1-service-2.png").gallery__item
+                img(src="./tmp/1-service/1-service-2.png", alt="")
+            div
+              a(href="./tmp/1-service/1-service-3.png").gallery__item
+                img(src="./tmp/1-service/1-service-3.png", alt="")
+            div
+              a(href="./tmp/1-service/1-service-1.png").gallery__item
+                img(src="./tmp/1-service/1-service-1.png", alt="")
+            div
+              a(href="./tmp/1-service/1-service-2.png").gallery__item
+                img(src="./tmp/1-service/1-service-3.png", alt="")
+        
+        .visible-sm.visible-xs
+
+          // One object
+          .one-object
+            .one-object__about
+              .one-object__title ИНФРАСТРУКТУРА
+              .one-object__about-info 
+                p Зал для занятий - “Восточная комната”
+                p Площадки для йоги на свежем воздухе
+              .one-object__title УСЛУГИ
+              .one-object__about-info 
+                p Профессиональный инвентарь
+                p Групповые занятия 
+                p Индивидуальные занятия (по предварительному бронированию на ресепшн отеля)
+            .one-object__contacts
+              .one-object__title КОНТАКТЫ
+              p 
+                strong Запись на индивидуальные занятия:
+                br
+                a(href="tel:") Тел.: +7 495 626 23 33
+              p
+                strong Заказ корпоративных услуг: 
+                br
+                | Ахова Анастасия 
+                br
+                a(href="tel:") Тел.: +7 915 713 06 71 
+                br
+                a(href="mailto:") a.ahova@konakovo.com
+              p 
+                strong Бронирование коттеджей:
+                br
+                | Тихановская Елена
+                br
+                a(href="tel:") Тел.: +7 919 050 50 11
+                br
+                a(href="mailto:") e.tikhanovskaya@konakovo.com
+      
+      // Form
+      include ./_include/_form
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

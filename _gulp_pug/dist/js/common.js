@@ -103,6 +103,28 @@ $(document).on('ready', function(){
     autoplaySpeed: 2000
   });
 
+  $('.gallery__carousel').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    arrows: false,
+    variableWidth: true
+  });
+
+  $('.one-service__carousel').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="ion-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="ion-chevron-right"></i></button>',
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
