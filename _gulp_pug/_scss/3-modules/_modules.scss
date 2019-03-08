@@ -918,6 +918,15 @@
     position: top center;
     repeat: no-repeat;
     size: cover;
+    color: #fafafa;
+  }
+  &--404 {
+    padding-top: 15px;
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 

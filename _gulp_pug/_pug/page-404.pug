@@ -1,0 +1,48 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '1 услуга' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 услуга' + ' - Конаково' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li: a(href="#!") Главная
+          li: span  Название раздела
+
+    // Big picture
+    .big-picture.big-picture--404
+      img(src="./images/page-404.png", alt="")
+    
+    // Content
+    .content
+      .container
+
+        .row
+          .col-md-10.col-md-push-1
+            .content__head
+              h1 Cтраница не найдена
+
+            p
+              strong Страница потерялась...  Мы ее уже ищем!
+            p Что-то пошло не так. Возможно, вы ошиблись, набирая адрес в строке браузера — так бывает. Если вы уверены, что адрес набран верно, то страница, скорее всего, была удалена и ее больше нет.
+            p Но не отчаивайтесь! Смело обращайтесь за помощью в поддержку или перейдите на главную страницу.
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

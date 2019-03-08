@@ -193,6 +193,12 @@
   }
   .big-picture {
     height: 426px;
+    &--404 {
+      padding-top: 8px;
+      img {
+        width: 640px;
+      }
+    }
   }
   .contacts {
     .border-lines {
@@ -414,6 +420,12 @@
   }
   .big-picture {
     height: 320px;
+    &--404 {
+      padding-top: 0px;
+      img {
+        width: 490px;
+      }
+    }
   }
   .driveway {
     padding-bottom: 20px;
@@ -646,6 +658,11 @@
   }
   .big-picture {
     height: 230px;
+    &--404 {
+      img {
+        width: 351px;
+      }
+    }
   }
   .contacts {
      .border-lines {
@@ -989,6 +1006,11 @@
   }
   .big-picture {
     height: 150px;
+    &--404 {
+      img {
+        width: 225px;
+      }
+    }
   }
   .driveway {
     &__block {
