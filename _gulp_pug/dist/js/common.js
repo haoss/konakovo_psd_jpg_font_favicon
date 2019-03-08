@@ -3,31 +3,14 @@
 // Document ready
 $(document).on('ready', function(){
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
-      delegate: '.gallery-item',
+      delegate: '.gallery__item',
       type: 'image',
       gallery:{
-        enabled:true
+        enabled: true,
+        tCounter: '%curr% из %total%'
       },
       zoom: {
         enabled: true, // By default it's false, so don't forget to enable it

@@ -43,9 +43,11 @@ body {
   font-style: italic;
 }
 .h2, h2 {
-  font-size: 18px;
+  font-size: 40px;
   line-height: 1.14;
   margin-bottom: 20px;
+  font-family: $font-voip;
+  font-style: italic;
 }
 .h3, h3 {
   font-size: 16px;

@@ -1,0 +1,175 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Услуги' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Услуги' + ' - Конаково' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li: a(href="#!") Главная
+          li: span  Название раздела
+
+    // Big picture
+    .big-picture(style="background-image: url('./tmp/bg/bg-services.jpg');")
+    
+    // Content
+    .content
+      
+      .content__head
+        .container
+          h1 Наши услуги
+
+      // Services
+      .services.services--list
+        .container
+
+          nav.services__nav
+            ul
+              li: a(href="#!") НАШИМ ДЕТЯМ
+              li: a(href="#!") Ваша красота
+              li: a(href="#!") тверская природа
+              li: a(href="#!") развлечения
+              li: a(href="#!") фитнес
+              li: a(href="#!") экстрим
+              li: a(href="#!") верхняя волга
+              li: a(href="#!") летний отдых
+              li: a(href="#!") конаковские мастера
+              li: a(href="#!") ваш праздник
+              li: a(href="#!") корпоративный отдых
+
+        // Services row
+        .services__row
+          .container
+
+            .services__row-wrapper
+              div
+                .services__row-block.services__row-block--first
+                  .border-lines
+                    span лучшее
+                  h2 нашим
+                    br
+                    |  детям
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-11.png", alt="")
+                  a(href="#!").services__row-title Детский клуб и детская площадка “Капитошка”
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-21.png", alt="")
+                  a(href="#!").services__row-title Детский остров
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-31.png", alt="")
+                  a(href="#!").services__row-title Контактный зоопарк
+
+        // Services row
+        .services__row.services__row--even
+          .container
+
+            .services__row-wrapper
+              div
+                .services__row-block.services__row-block--first
+                  .border-lines
+                    span натуральная
+                  h2 ваша
+                    br
+                    |  красота
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-21.png", alt="")
+                  a(href="#!").services__row-title Детский клуб и детская площадка “Капитошка”
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-22.png", alt="")
+                  a(href="#!").services__row-title Детский остров
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-23.png", alt="")
+                  a(href="#!").services__row-title Контактный зоопарк
+
+        // Services row
+        .services__row
+          .container
+
+            .services__row-wrapper
+              div
+                .services__row-block.services__row-block--first
+                  .border-lines
+                    span чистая
+                  h2 тверская
+                    br
+                    |  природа
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-31.png", alt="")
+                  a(href="#!").services__row-title Детский клуб и детская площадка “Капитошка”
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-32.png", alt="")
+                  a(href="#!").services__row-title Детский остров
+              div
+                .services__row-block
+                  .services__row-img
+                    a(href="#!")
+                      span Подробнее
+                        i
+                    img(src="./tmp/services/services-list-33.png", alt="")
+                  a(href="#!").services__row-title Контактный зоопарк
+
+
+        
+      
+      // Form
+      include ./_include/_form
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
