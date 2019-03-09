@@ -473,6 +473,14 @@
       }
     }
   }
+  .one-cottage {
+    &__description {
+      display: block;
+      &>div {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
@@ -1073,6 +1081,17 @@
   .one-object {
     padding: 0;
     &__about, &__contacts {
+      padding: 20px;
+    }
+  }
+  .one-cottage {
+    &__description {
+      font-size: 22px;
+      p {
+        line-height: 30px;
+      }
+    }
+    &__info {
       padding: 20px;
     }
   }

@@ -1,0 +1,162 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '1 коттедж' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 коттедж' + ' - Конаково' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li: a(href="#!") Главная
+          li: span  Название раздела
+
+    // Big picture
+    .big-picture(style="background-image: url('./tmp/bg/bg-cottage.jpg');")
+    
+    // Content
+    .content
+      .container
+
+        .content__head
+          h1 4 уюутных коттеджа для отдыха
+
+        // Description
+        .one-cottage__description
+          div
+            p Архитектура коттеджей "Шале" отсылает к простому, но функционально продуманному альпийскому зодчеству, в котором особый акцент делается на экологичности материалов отделки и мебели. Яркие детали в интерьере, комфортабельное оснащение делают отдых удобным и приятным.
+            .clear
+            a(href="#popup").btn.open-popup-link заказать 
+          div
+            .one-cottage__info
+              p 4 просторных комфортабельных коттеджа ждут вас!
+              p Время заезда: 
+                br
+                | после 18.00, время выезда — до 16:00.
+        
+        // Gallery
+        .one-cottage__wrapper
+          .one-cottage__carousel
+            - for (var i=0; i<5; i++) {
+            div
+              .one-cottage__block
+                .one-cottage__block-img
+                  img(src="./tmp/one-cottage-gallery.jpg", alt="").img-responsive
+                  img(src="./tmp/one-cottage-gallery.jpg", alt="")
+                  img(src="./tmp/one-cottage-gallery.jpg", alt="")
+            - }
+
+          p.text-center
+            small.f15 Простой, но функционально продуманный альпийский дизайн, в котором особый акцент делается на экологичности материалов отделки и мебели.
+
+        // Advantages
+        .advantages
+          .advantages__row
+            div
+              .advantages__block
+                .advantages__block-number 01
+                .advantages__block-plus +
+                p Наши коттеджи 
+                  strong новые и модерновые
+                  | , а дата постройки 
+                  strong 2019 год
+            div
+              .advantages__block
+                .advantages__block-number 02
+                .advantages__block-plus +
+                p 
+                  strong Современный дизайн
+                  |  и только экологичные материалы
+            div
+              .advantages__block
+                .advantages__block-number 03
+                .advantages__block-plus +
+                p 
+                  strong Транспортная доступность
+                  |  из Москвы и Московской области
+            div
+              .advantages__block
+                .advantages__block-number 04
+                .advantages__block-plus +
+                p Комфортабельные 
+                  strong коттеджи у реки
+                  |  на берегу Московского моря
+
+        // Driveway
+        .driveway
+          .driveway__row
+            div
+              .driveway__block
+                img(src="./images/icons/icon-equipment.svg", alt="").driveway__block-img.w60
+                .driveway__block-title ОСНАЩЕНИЕ коттеджа
+                ul
+                  li 2 кровати DBL (180*200), 2-х ярусная кровать (2 по 90*200)
+                  li диван
+                  li 2 санузла, душ.кабина и ванна
+                  li оборудованная кухня с плитой, микроволновой печью, холодильником, обеденным столом и набором посуды
+                  li камин
+                  li терраса
+                  li рабочий стол
+                  li Led телевизор и кабельное ТВ
+                  li телефон
+                  li мини-бар
+                  li фен
+                  li гладильный центр
+                  li набор косметических средств
+                  li wi-fi
+      
+            div
+              .driveway__block
+                img(src="./images/icons/icon-work.svg", alt="").driveway__block-img.w60
+                .driveway__block-title у нас есть чем заняться
+                ul
+                  li детский клуб «Капитошка» (вс-чт с 10:00 до 20:00, пт-сб с 10:00 до 24:00)
+                  li тренажерный зал (круглосуточно)
+                  li бильярд - американский пул (круглосуточно), 
+                  li настольный теннис
+                  li анимационные и шоу-программы   
+                  li трансляция спортивных событий и кино в спорт-баре
+                  li мангальное место у коттеджа (сопутствующие услуги: уголь/дрова, розжиг, комплект шампуров, решетка - заказываются и оплачиваются дополнительно)
+
+        // Gallery
+        .gallery
+          p.border-lines
+            span Фото 
+            span территории
+          .gallery__carousel
+            div
+              a(href="./tmp/cottage/cottage-img-1.png").gallery__item
+                img(src="./tmp/cottage/cottage-img-1.png", alt="")
+            div
+              a(href="./tmp/cottage/cottage-img-2.png").gallery__item
+                img(src="./tmp/cottage/cottage-img-2.png", alt="")
+            div
+              a(href="./tmp/cottage/cottage-img-3.png").gallery__item
+                img(src="./tmp/cottage/cottage-img-3.png", alt="")
+            div
+              a(href="./tmp/cottage/cottage-img-1.png").gallery__item
+                img(src="./tmp/cottage/cottage-img-1.png", alt="")
+            div
+              a(href="./tmp/cottage/cottage-img-2.png").gallery__item
+                img(src="./tmp/cottage/cottage-img-2.png", alt="")
+      
+      // Form
+      include ./_include/_form
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

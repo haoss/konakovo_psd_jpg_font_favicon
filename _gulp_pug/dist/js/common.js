@@ -125,6 +125,19 @@ $(document).on('ready', function(){
     nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="ion-chevron-right"></i></button>',
   });
 
+  $('.one-cottage__carousel').slick({
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="ion-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="ion-chevron-right"></i></button>',
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

@@ -979,6 +979,7 @@
     margin: 0 -15px;
     &>div {
       padding: 0 15px;
+      width: 50%;
     }
   }
   &__block {
@@ -1009,6 +1010,10 @@
       right: 35px;
       top: 40px;
       z-index: 5;
+      &.w60 {
+        width: 60px;
+        height: 60px;
+      }
     }
     a {
       display: inline-block;
@@ -1026,6 +1031,30 @@
       }
       &:hover {
         color: $color-green;
+      }
+    }
+    ul {
+      margin: 0 0 30px 0;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      li {
+        list-style: none;
+        padding-left: 32px;
+        min-height: 17px;
+        line-height: 26px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "\f3ff";
+          font-family: $font-ionicons;
+          color: $color-green;
+          font-size: 17px;
+          line-height: 1;
+          left: 0;
+          top: 5px;
+        }
       }
     }
   }
@@ -1557,4 +1586,174 @@
       }
     }
   }
+}
+
+.one-cottage {
+  &__wrapper {
+    padding-bottom: 70px;
+  }
+  &__carousel {
+    margin-bottom: 15px !important;
+
+    .slick {
+      &-current {
+        [class*="-img"] {
+          img {
+            opacity: 1;
+
+            &+img {
+              opacity: 0.3;
+
+              &+img {
+                opacity: 0.1;
+              }
+            }
+          }
+        }
+      }
+
+      &-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        text-align: center;
+        bottom: 30px;
+        margin: 0;
+        padding: 0;
+
+        &>li {
+          width: auto;
+          height: auto;
+          vertical-align: middle;
+          margin: 0 3px;
+          padding: 0;
+
+          &::before {
+            display: none;
+          }
+
+          &>button {
+            height: 10px;
+            width: 10px;
+            border: 0;
+            background: $color-gray;
+            border-radius: 50%;
+
+            &::before {
+              display: none;
+            }
+          }
+
+          &.slick-active {
+            &>button {
+              background: $color-green;
+            }
+          }
+        }
+      }
+
+      &-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        background: $color-white;
+        opacity: 1;
+        box-shadow: 0 5px 15px rgba($color-white, .8);
+        transition: all 0.35s;
+
+        &::before {
+          display: none;
+        }
+
+        i {
+          font-size: 26px;
+          color: $primary-color;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+          box-shadow: none;
+          background: rgba($color-white, .5);
+        }
+      }
+
+      &-prev {
+        left: 34px;
+      }
+
+      &-next {
+        right: 34px;
+      }
+    }
+  }
+  &__block {
+    position: relative;
+
+    &-img {
+      padding-bottom: 16px;
+      position: relative;
+
+      img {
+        position: relative;
+        z-index: 10;
+
+        &+img {
+          position: absolute;
+          bottom: 8px;
+          z-index: 6;
+          left: 15px;
+          width: calc(100% - 30px);
+          opacity: 0;
+
+          &+img {
+            bottom: 0;
+            left: 30px;
+            width: calc(100% - 60px);
+            z-index: 4;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  &__description {
+    display: flex;
+    margin: 0 -15px;
+    font-size: 26px;
+    p {
+      line-height: 34px;
+      margin-bottom: 35px;
+    }
+    &>div {
+      width: 50%;
+      padding: 0 15px 55px 15px;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 317px;
+    }
+  }
+  &__info {
+     border: 10px solid $color-green;
+     padding: 45px 35px 45px 40px;
+     font-family: $font-voip;
+     font-style: italic;
+     font-size: 20px;
+     p {
+       line-height: 34px;
+       &:last-child {
+         margin-bottom: 0;
+       }
+     }
+  }
+  
 }
