@@ -55,6 +55,21 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  $('.ajax-popup-link').magnificPopup({
+    type: 'ajax',
+    midClick: true,
+    callbacks: {
+      open: function() {
+        setTimeout(function(){
+          var phone = $('.phone-mask');
+          phone.each(function () {
+            $(this).mask("+7 (999) 999-99-99");
+          })
+        }, 300);
+      }
+    }
+  });
+
   headerBtn();
   phoneMask();
 
@@ -109,7 +124,9 @@ $(document).on('ready', function(){
     dots: true,
     infinite: true,
     arrows: false,
-    variableWidth: true
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2000
   });
 
   $('.one-service__carousel').slick({
@@ -150,6 +167,9 @@ $(document).on('ready', function(){
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.feedback-form', function(){
+    phoneMask();
+  });
+  simpleForm('form.feedback-form2', function(){
     phoneMask();
   });
 });
