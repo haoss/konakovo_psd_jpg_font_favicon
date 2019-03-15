@@ -123,10 +123,12 @@ $(document).on('ready', function(){
     slidesToScroll: 1,
     dots: true,
     infinite: true,
-    arrows: false,
+    arrows: true,
     variableWidth: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="ion-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="ion-chevron-right"></i></button>',
   });
 
   $('.one-service__carousel').slick({

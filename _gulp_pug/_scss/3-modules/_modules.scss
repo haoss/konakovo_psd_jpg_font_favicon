@@ -1382,6 +1382,41 @@
       margin-right: 30px;
     }
     .slick {
+      &-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        background: $color-white;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 5px 15px rgba($color-white, .8);
+        transition: all 0.35s;
+        &::before {
+          display: none;
+        }
+        i {
+          font-size: 26px;
+          color: $primary-color;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover {
+          box-shadow: none;
+          background: rgba($color-white, .5);
+        }
+      }
+      &-prev {
+        left: 34px;
+      }
+      &-next {
+        right: 34px;
+      }
       &-dots {
         position: absolute;
         left: 0;
@@ -1413,6 +1448,13 @@
             }
           }
         }
+      }
+    }
+
+    &:hover {
+      .slick-arrow {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
