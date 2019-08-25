@@ -10,3 +10,4 @@ _design
 .gulp
 *.orig
 _gulp_favicon_generator/faviconData.json
+_backup
