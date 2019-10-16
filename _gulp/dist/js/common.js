@@ -157,16 +157,6 @@ $(document).on('ready', function(){
     nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="ion-chevron-right"></i></button>',
   });
 
-  // Chrome Smooth Scroll
-  try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-      $.smoothScroll();
-    }
-  } catch(err) {
-
-  };
-
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.feedback-form', function(){
     phoneMask();
